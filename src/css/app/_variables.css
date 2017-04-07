@@ -1,0 +1,27 @@
+$color-text: #000;
+$bg-button: #007cc2;
+
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+$em-base: 16px;
+
+$darkest-gray:#1b1b1b;
+$dark-gray:#313131;
+$gray:#8f8f8f;
+
+$blue:#337cc0;
+$dark-blue:#00649e;
+
+$red:#c31f25;
+$dark-red:#af1218;
+
+$MD: "Material Design Icons";
+$FA: "FontAwesome";

@@ -1,0 +1,164 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row
+        .col-xs-12.fix-bread
+          ol.breadcrumb
+            li
+              a(href='#') Главная
+            li.active Контакты
+        .col-xs-12.col-md-9
+          h2.heading.heading-aside Контакты
+          .row
+            .col-xs-12.col-sm-6.contact__address
+              h3.heading Адрес редакции
+              address
+                p 65082, Украина, г. Одесса,
+                p Ул. Софиевская, 23
+                p <a href="tel:380487773610">+380 48 777 36 10</a> (многоканальный)
+            .col-xs-12.col-sm-6.contact__address
+              h3.heading Адрес редакции
+              address
+                p 65082, Украина, г. Одесса,
+                p Ул. Софиевская, 23
+                p <a href="tel:380487773610">+380 48 777 36 10</a> (многоканальный)
+
+            .col-xs-12.contact__redaction
+              h3.heading.text-center Редакция
+              p
+                |<strong>Юлия Мастетиурина</strong> — редактор рубрик: «На борту», «Анонсы», «Репортаж» <br/><a href="mailto:julia.mastetiurina@yachtsreview.com" class="underline-w">julia.mastetiurina@yachtsreview.com</a>
+              p
+                |<strong>Юлия Мастетиурина</strong> — редактор рубрик: «На борту», «Анонсы», «Репортаж» <br/><a href="mailto:julia.mastetiurina@yachtsreview.com" class="underline-w">julia.mastetiurina@yachtsreview.com</a>
+              p
+                |<strong>Юлия Мастетиурина</strong> — редактор рубрик: «На борту», «Анонсы», «Репортаж» <br/><a href="mailto:julia.mastetiurina@yachtsreview.com" class="underline-w">julia.mastetiurina@yachtsreview.com</a>
+              p
+                |<strong>Юлия Мастетиурина</strong> — редактор рубрик: «На борту», «Анонсы», «Репортаж» <br/><a href="mailto:julia.mastetiurina@yachtsreview.com" class="underline-w">julia.mastetiurina@yachtsreview.com</a>
+
+            .col-xs-12.contact__feedback
+              .feedback
+                .feedback__wrap.row
+                  h3.heading Обратная связь
+                  .col-xs-12.col-sm-6
+                    .form-group
+                      label.require ФИО:
+                      input(type="text", name="name", value="").form-control
+                    .form-group
+                      label.require Email:
+                      input(type="email", name="name", value="").form-control
+                    .form-group
+                      label.require Телефон:
+                      input(type="text", name="name", value="").form-control
+
+                  .col-xs-12.col-sm-6
+                    .form-group
+                      label Сообщение:
+                      textarea(name="name", rows="8", cols="40").form-control
+                  .col-xs-12.text-center
+                    button(type="submit", name="button").btn.btn_blue Отправить
+
+        aside.col-x-12.col-md-3.sidebar-base
+          .row
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .subscribe-mail
+                form(action="", method="post")
+                  p.heading ПодпиШитесь
+                  p.subheading Будьте в курсе актуальных новостей!
+                  input(type="email", name="name", value="" placeholder="Ваш email")
+                  button(type="submit", name="button").btn.btn_red Подписатся
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12.od-3
+              .sidebar-base__socials
+                p.heading Мы в соц. сетях
+                .socials-list
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+              .sidebar-base__fb
+                img(src="img/fb_widget.jpg", alt="")
+
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .prod-block-s
+                .prod-block-s__heading ПРОДАЖА ЯХТ
+                .prod-block-s__img
+                  img(src="img/category-pic.jpg", alt="")
+                .prod-block-s__data
+                  a(href="#").underline-w Pershing 115 `2007
+                  table
+                    tr
+                      td: span Длина, м.
+                      td: span 17
+                    tr
+                      td: span Двигатель
+                      td: span Volvo 575 л.с.
+                  .prod-block-s__price
+                    span 175 000$
+                a(href="#").all-ads.underline-w Все предложения
+                .prod-block-s__sponsor
+                  img(src="img/sponsor_bg.jpg", alt="")
+                  .sponsor-brand
+                    span Спонсор рубрики
+                    img(src="img/sponsor-logo.png", alt="")
+
+
+
+
+
+
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

@@ -1,0 +1,51 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row
+        .col-x-12.col-md-9
+          h2.heading.heading-aside Результаты поиска
+          .row
+            .col-xs-12
+              .page-info
+                ol.breadcrumb
+                  li
+                    a(href='#') Главная
+                  li.active Результаты поиска
+            .col-xs-12.aside-text
+              p По запросу «новая яхта AMG» — найдено 172 результатов
+              ul.searchResult
+                li
+                  a(href="#").underline-w: strong На воду спущена новая мега яхта AMG
+                  .searchResult__tag
+                    span Рубрика:
+                    a(href="#").underline на борту
+                li
+                  a(href="#").underline-w: strong Знаменитая верфь Riva снова в строю
+                  .searchResult__tag
+                    span Рубрика:
+                    a(href="#").underline новости
+                li
+                  a(href="#").underline-w: strong На воду спущена новая мега яхта AMG
+                  .searchResult__tag
+                    span Рубрика:
+                    a(href="#").underline на борту
+
+
+block footer
+  include ../pug/partials/footer.pug

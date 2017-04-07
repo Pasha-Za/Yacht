@@ -1,0 +1,97 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid.profile
+      .row
+        .col-xs-12
+          h2.heading.heading-aside Кабинет
+          .row.tabs
+            .col-xs-12
+              .page-info
+                ul.tabs__controls
+                  li
+                    a(href="#profileData").active: span Мои данные
+                  li
+                    a(href="#profileNum"): span Мои Номера
+
+            .col-xs-12.tabs__content
+              .tabs-wrap.active#profileData
+                .row
+                  form
+                    .col-xs-12: h3.heading Мои данные
+                    .col-xs-12.col-sm-6
+                      .form-group
+                        label.require Логин:
+                        input(type="text", name="name", value="").form-control
+                      .form-group
+                        label.require Имя:
+                        input(type="text", name="name", value="").form-control
+                      .form-group
+                        label.require Email:
+                        input(type="email", name="name", value="").form-control
+                      .form-group
+                        label.require Пароль:
+                        input(type="password", name="name", value="").form-control
+                      button(type="submit", name="button").btn.btn_blue Сохранить
+
+                    .col-xs-12.col-sm-6
+                      p.title Аватарка
+                      p.gray.tips Выберите любое изображение  в формате <strong>JPG</strong> или <strong>PNG</strong> размером не менее <strong>200х200</strong> px
+                      .add-photo
+                        a(href="#")
+                          figure: img(src="img/add-photo.jpg", alt="")
+              .tabs-wrap#profileNum
+                .row
+                  .col-xs-12
+                    h3.heading Мои номера
+                    .profile__magazines
+                      .row
+                        .col-xs-12.col-sm-4.col-lg-2
+                          .cover-shelf
+                            .cover-shelf__pic
+                              img(src="img/cover-1.jpg", alt="")
+                              span.number № 39
+                            .cover-shelf__btn
+                              a(href="#").btn.btn_blue  Купить
+
+                        .col-xs-12.col-sm-4.col-lg-2
+                          .cover-shelf
+                            .cover-shelf__pic
+                              img(src="img/cover-1.jpg", alt="")
+                              span.number № 39
+                            .cover-shelf__btn
+                              a(href="#").btn.btn_blue  Купить
+                            .cover-shelf__download.underline-w
+                              a(href="#") Скачать в PDF
+
+                        .col-xs-12.col-sm-4.col-lg-2
+                          .cover-shelf
+                            .cover-shelf__pic
+                              img(src="img/cover-1.jpg", alt="")
+                              span.number № 39
+                            .cover-shelf__btn
+                              a(href="#").btn.btn_blue  Купить
+
+
+
+
+
+
+
+block footer
+  include ../pug/partials/footer.pug

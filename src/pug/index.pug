@@ -1,0 +1,141 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid.index-info
+      .row
+        .row-md-height
+          .col-xs-12.col-lg-9.col-lg-height
+            .slider-section.index-slider
+              .slider-section__item
+                img(data-lazy="img/uploads/slide-2.jpg", alt="")
+                .caption
+                  span.underline-w Новая супер яхта iva Vertigo
+              .slider-section__item
+                img(data-lazy="img/uploads/slide-2.jpg", alt="")
+                .caption
+                  span.underline-w Новая супер яхта iva Vertigo
+
+          .col-xs-12.col-lg-3.col-lg-height
+            aside.thumbnail.text-center
+              .thumbnail__img
+                img(src="img/human.jpg", alt="").circle-img
+              .thumbnail__data
+                .thumbnail__heading Welcome to aboard
+                .thumbnail__title Заглавие статьи от редактора
+                .thumbnail__text
+                p
+                  |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+    section.container-fluid.text-center
+      h2.heading Новости
+      .row
+        .col-xs-12.col-sm-6.col-lg-3
+          .info-frame
+            figure.info-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .info-frame__heading Новости
+            .info-frame__title Заглавие и название статьи
+            .info-frame__text
+              p
+                |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+            .info-frame__btn
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-lg-3
+          .info-frame
+            figure.info-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .info-frame__heading Новости
+            .info-frame__title Заглавие и название статьи
+            .info-frame__text
+              p
+                |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+            .info-frame__btn
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-lg-3
+          .info-frame
+            figure.info-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .info-frame__heading Новости
+            .info-frame__title Заглавие и название статьи
+            .info-frame__text
+              p
+                |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+            .info-frame__btn
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-lg-3
+          .info-frame
+            figure.info-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .info-frame__heading Новости
+            .info-frame__title Заглавие и название статьи
+            .info-frame__text
+              p
+                |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+            .info-frame__btn
+              a(href="#").btn Подробнее
+
+      a(href="#").btn.btn_blue ВСЕ НОВОСТИ
+
+    section.container-fluid.banner-section
+      .row
+        .col-xs-12.col-sm-6
+          a(href="#"): img(src="img/banner_big.jpg", alt="")
+        .col-xs-12.col-sm-6
+          a(href="#"): img(src="img/banner_big.jpg", alt="")
+
+    section.container-fluid.video-section
+      h2.heading Yachts Review Video
+      .row
+        .col-xs-12
+          .embed-responsive.embed-responsive-16by9
+            iframe(src="https://www.youtube.com/embed/VAxRywzIuLs" frameborder="0" allowfullscreen).embed-responsive-item
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .row-md-height
+          .col-xs-12.col-md-6.col-md-height.col-md-top
+            .magazine-block
+              .magazine-block__img
+                img(src="img/mag-sign.jpg", alt="")
+              .magazine-block__data
+                p.heading Text
+                table
+                  tr
+                    td 1 номер
+                    td 120.00 гривен
+                  tr
+                    td 1 номер
+                    td 120.00 гривен
+                  tr
+                    td 1 номер
+                    td 120.00 гривен
+                  tr
+                    td 10 номеров
+                    td 820.00 гривен
+                button(type="button", name="button").btn.btn_red подписаться
+          .col-xs-12.col-md-6.col-md-height.col-md-top
+            .magazine-block
+              .magazine-block__img
+                img(src="img/mag-sign_e.jpg", alt="")
+              .magazine-block__data
+                p.heading Text teassa satsaca
+                p.text 120.00 гривен
+                button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

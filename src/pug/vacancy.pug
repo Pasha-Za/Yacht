@@ -1,0 +1,183 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row
+        .col-x-12.col-md-9
+          h2.heading.heading-aside Вакансии
+          .row
+            .col-xs-12
+              .page-info
+                ol.breadcrumb
+                  li
+                    a(href='#') Главная
+                  li.active Вакансии
+            .col-xs-12.aside-text
+              .profession-b
+                h3.heading МЕНЕДЖЕР РЕКЛАМНОГО ОТДЕЛА
+                p
+                  strong Регион:<br/>
+                  |Киев (офис в центре города).
+                p
+                  strong Обязанности:<br/>
+                  |Поиск, сбор и анализ маркетинговой информации, работа с клиентами, деловая переписка, встречи и переговоры, написание пресс-релизов, продвижение в социальных сетях, наполнение контента сайта, участие в тематических выставках, административная работа в офисе.
+                p
+                  strong Требования к кандидату:<br/>
+                  |25-30 лет, образование - высшее, опыт работы не менее 2-х лет, опыт работы с документооборотом и отчетностью, презентабельный  внешний вид, умение общаться на деловом уровне, ответственность, инициативность, настойчивость, работа на результат.<br/>
+                  |Оплата: ставка + % + премии.
+                p
+                  strong Условия работы:<br/>
+                  |Полный день (ПН-ПТ: 10.00-19.00, СБ: 12.00-18.00 (по необходимости), ВС – выходной). Компенсация представительских затрат,  мобильной связи, транспортных расходов.
+              .profession-b
+                h3.heading МЕНЕДЖЕР РЕКЛАМНОГО ОТДЕЛА
+                p
+                  strong Регион:<br/>
+                  |Киев (офис в центре города).
+                p
+                  strong Обязанности:<br/>
+                  |Поиск, сбор и анализ маркетинговой информации, работа с клиентами, деловая переписка, встречи и переговоры, написание пресс-релизов, продвижение в социальных сетях, наполнение контента сайта, участие в тематических выставках, административная работа в офисе.
+                p
+                  strong Требования к кандидату:<br/>
+                  |25-30 лет, образование - высшее, опыт работы не менее 2-х лет, опыт работы с документооборотом и отчетностью, презентабельный  внешний вид, умение общаться на деловом уровне, ответственность, инициативность, настойчивость, работа на результат.<br/>
+                  |Оплата: ставка + % + премии.
+                p
+                  strong Условия работы:<br/>
+                  |Полный день (ПН-ПТ: 10.00-19.00, СБ: 12.00-18.00 (по необходимости), ВС – выходной). Компенсация представительских затрат,  мобильной связи, транспортных расходов.
+
+              .aside-text__questions.text-center
+                h2.heading Телефон
+                a(href="tel:380444941589").phone: span +380 44 494 15 89
+            .col-xs-12.contact__feedback
+              .feedback
+                .feedback__wrap.row
+                  h3.heading Отправить резюме
+                  .col-xs-12.col-sm-6
+                    .form-group
+                      label.require ФИО:
+                      input(type="text", name="name", value="").form-control
+                    .form-group
+                      label.require Желаемая должность:
+                      select.custom-select
+                        option text 1
+                        option text 2
+                        option text 3
+                    .form-group
+                      label.require Email:
+                      input(type="email", name="name", value="").form-control
+                    .form-group
+                      label.require Телефон:
+                      input(type="text", name="name", value="").form-control
+
+                  .col-xs-12.col-sm-6
+                    .form-group
+                      label Сообщение:
+                      textarea(name="name", rows="8", cols="40").form-control
+                  .col-xs-12.text-center
+                    button(type="submit", name="button").btn.btn_blue Отправить
+
+
+        aside.col-x-12.col-md-3.sidebar-base
+          .row
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .subscribe-mail
+                form(action="", method="post")
+                  p.heading ПодпиШитесь
+                  p.subheading Будьте в курсе актуальных новостей!
+                  input(type="email", name="name", value="" placeholder="Ваш email")
+                  button(type="submit", name="button").btn.btn_red Подписатся
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12.od-3
+              .sidebar-base__socials
+                p.heading Мы в соц. сетях
+                .socials-list
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+              .sidebar-base__fb
+                img(src="img/fb_widget.jpg", alt="")
+
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .prod-block-s
+                .prod-block-s__heading ПРОДАЖА ЯХТ
+                .prod-block-s__img
+                  img(src="img/category-pic.jpg", alt="")
+                .prod-block-s__data
+                  a(href="#").underline-w Pershing 115 `2007
+                  table
+                    tr
+                      td: span Длина, м.
+                      td: span 17
+                    tr
+                      td: span Двигатель
+                      td: span Volvo 575 л.с.
+                  .prod-block-s__price
+                    span 175 000$
+                a(href="#").all-ads.underline-w Все предложения
+                .prod-block-s__sponsor
+                  img(src="img/sponsor_bg.jpg", alt="")
+                  .sponsor-brand
+                    span Спонсор рубрики
+                    img(src="img/sponsor-logo.png", alt="")
+
+
+
+
+
+
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

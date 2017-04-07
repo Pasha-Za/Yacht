@@ -1,0 +1,24 @@
+{
+  "name": "markup",
+  "version": "0.0.0",
+  "authors": [
+    "Ebola Communications font-end devs"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "3.*",
+    "reset-css": "^2.2.0",
+    "mobile-detect": "^1.3.3",
+    "jquery.maskedinput": "^1.4.1"
+  },
+  "devDependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "slick-carousel": "slick.js#^1.6.0"
+  }
+}

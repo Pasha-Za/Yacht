@@ -1,0 +1,223 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row
+        .col-x-12.col-md-9.subscribe-page
+          h2.heading.heading-aside Подписка
+          .row
+            .col-xs-12
+              .page-info
+                ol.breadcrumb
+                  li
+                    a(href='#') Главная
+                  li.active Подписка
+
+            .col-xs-12.subscribe-page__advantages
+              h3.heading.text-center ПРЕИМУЩЕСТВА ПОДПИСКИ
+              .economy.subscribe-page__advan
+                h3.heading ЭКОНОМИЯ
+                p
+                  |Вы экономите от 10% до 40% стоимости журнала в печатной версии по отношению к розничной цене (1 номер – 120,00 грн.). При оформлении подписки на новый номер в электронной версии Вы экономите время, получив после оплаты доступ для чтения в своем «Кабинете».
+
+              .convenience.subscribe-page__advan
+                h3.heading УДОБСТВо
+                p
+                  |Вам не придется самостоятельно искать очередной печатный номер. Журнал курьером доставят непосредственно на Ваш адрес. Электронная версия нового номера всегда остается с Вами в любом уголке мира.
+
+              .guarantee.subscribe-page__advan
+                h3.heading ГАРАНТИЯ
+                p
+                  |Издательство гарантирует каждому подписчику по его обращению<br/> повторную бесплатную отправку не доставленного номера.
+
+            .col-xs-12.subscribe-page__create
+              h3.heading Оформить подписку
+              p.gray.subtitle Для оформления подписки Вам необходимо сделать:
+              ul.steps
+                li Заполнить и отправить данные на получение журнала.
+                li Произвести оплату выбранного количества журналов с помощью:
+                  ul
+                    li - платежной системы portmone.com на данной странице сайта;
+                    li - или заказать счет и оплатить в любом отделении банка Украины.
+              form(action="", method="post")
+                .row
+                .col-xs-12.col-sm-6
+                  figure.poster: img(src="img/subsr-pic.jpg", alt="")
+                .col-xs-12.col-sm-6
+                  h3.heading Данные для получения журналов
+                  p.gray.subtitle Выберите тип подписки:
+                  ul
+                    li
+                      label.custom
+                        input(type="radio", name="subscr", value="")
+                        span 1 номер (электронная версия) - <strong>120 грн.</strong>
+                    li
+                      label.custom
+                        input(type="radio", name="subscr", value="")
+                        span 1 номер (электронная версия) - <strong>120 грн.</strong>
+                    li
+                      label.custom
+                        input(type="radio", name="subscr", value="")
+                        span 1 номер (электронная версия) - <strong>120 грн.</strong>
+                    li
+                      label.custom
+                        input(type="radio", name="subscr", value="")
+                        span 1 номер (электронная версия) - <strong>120 грн.</strong>
+                    li
+                      label.custom
+                        input(type="radio", name="subscr", value="")
+                        span 1 номер (электронная версия) - <strong>120 грн.</strong>
+
+                  p.gray Услуги по подписки журналов не облагаются НДС согласно НКУ
+
+                .col-xs-12.subscribe-page__fields
+                  span.step-tag 1 шаг
+                  span Заполните информацию о себе для получения журнала:
+                  .row.fields-group
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Имя:
+                      input(type="text", name="name", value="").form-control
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Фамилия:
+                      input(type="text", name="name", value="").form-control
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Количество номеров:
+                      select.custom-select
+                        option 1
+                        option 2
+                        option 3
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Начиная с №:
+                      input(type="text", name="name", value="").form-control
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Индекс:
+                      input(type="text", name="name", value="").form-control
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Город/Населенный пункт:
+                      input(type="text", name="name", value="").form-control
+                    .col-xs-12.col-sm-6.form-group
+                      label.require Улица:
+                      input(type="text", name="name", value="").form-control
+                    .col-xs-12.col-sm-6.form-group.clearfix
+                      .half
+                        label.require Дом / корпус:
+                        input(type="text", name="name", value="").form-control
+                      .half
+                        label.require Квартира:
+                        input(type="text", name="name", value="").form-control
+                    .col-xs-12.form-group.clearfix.fields-group__contacts
+                      h6.heading Ваши контакты:
+                      .half
+                        label.require Телефон с кодом города:
+                        input(type="text", name="name", value="").form-control.phone-js
+                      .half
+                        label.require E-mail:
+                        input(type="email", name="name", value="").form-control
+                  button(type="submit", name="button").btn.btn_blue Отправить
+
+
+        aside.col-x-12.col-md-3.sidebar-base
+          .row
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .subscribe-mail
+                form(action="", method="post")
+                  p.heading ПодпиШитесь
+                  p.subheading Будьте в курсе актуальных новостей!
+                  input(type="email", name="name", value="" placeholder="Ваш email")
+                  button(type="submit", name="button").btn.btn_red Подписатся
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12.od-3
+              .sidebar-base__socials
+                p.heading Мы в соц. сетях
+                .socials-list
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+              .sidebar-base__fb
+                img(src="img/fb_widget.jpg", alt="")
+
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .prod-block-s
+                .prod-block-s__heading ПРОДАЖА ЯХТ
+                .prod-block-s__img
+                  img(src="img/category-pic.jpg", alt="")
+                .prod-block-s__data
+                  a(href="#").underline-w Pershing 115 `2007
+                  table
+                    tr
+                      td: span Длина, м.
+                      td: span 17
+                    tr
+                      td: span Двигатель
+                      td: span Volvo 575 л.с.
+                  .prod-block-s__price
+                    span 175 000$
+                a(href="#").all-ads.underline-w Все предложения
+                .prod-block-s__sponsor
+                  img(src="img/sponsor_bg.jpg", alt="")
+                  .sponsor-brand
+                    span Спонсор рубрики
+                    img(src="img/sponsor-logo.png", alt="")
+
+
+
+
+
+
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

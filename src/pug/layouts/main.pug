@@ -1,0 +1,16 @@
+block variables
+  - let title = '';
+  - let debug = true;
+doctype html
+html(lang='ru')
+  head: include ../partials/head.pug
+  body
+    include ../partials/debug.pug
+    #wrapper
+      #content
+        block header
+        block body
+
+      block footer
+    include ../partials/popups.pug
+    include ../partials/scripts.pug

@@ -1,0 +1,206 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row
+        .col-xs-12.fix-bread
+          ol.breadcrumb
+            li
+              a(href='#') Главная
+              li.active Все номера
+        .col-xs-12.col-md-9
+          h2.heading.heading-aside Все номера
+          .row
+            .col-xs-12
+              .info-panel
+                p
+                  |Уважаемые наши читатели!
+                p
+                  |Архивные номера для коллекции Вы можете приобрести в редакции нашего издания (г. Одесса) и в представительстве редакции (г. Киев), предварительно связавшись с нами по телефонам:
+                p
+                  |г. Одесса +380 48 777-36-10 <br/>г. Киев +380 44 494-15-89
+                p
+                  |Внимание! Количество некоторых архивных номеров ограничено.
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+                .cover-shelf__download.underline-w
+                  a(href="#") Скачать в PDF
+
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+                .cover-shelf__download.underline-w
+                  a(href="#") Скачать в PDF
+
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+                .cover-shelf__download.underline-w
+                  a(href="#") Скачать в PDF
+
+            .col-xs-12.col-sm-4.col-lg-3
+              .cover-shelf
+                .cover-shelf__pic.ratio_16-9
+                  img(data-src="img/cover-1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="").b-lazy
+                  span.number № 39
+                .cover-shelf__btn
+                  a(href="#").btn.btn_blue  Купить
+
+
+
+        aside.col-xs-12.col-md-3.sidebar-base
+          .row
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .subscribe-mail
+                form(action="", method="post")
+                  p.heading ПодпиШитесь
+                  p.subheading Будьте в курсе актуальных новостей!
+                  input(type="email", name="name", value="" placeholder="Ваш email")
+                  button(type="submit", name="button").btn.btn_red Подписатся
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12.od-3
+              .sidebar-base__socials
+                p.heading Мы в соц. сетях
+                .socials-list
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+              .sidebar-base__fb
+                iframe(src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FYachtsReview%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=286546341761360', width='340', height='214', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true')
+
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .prod-block-s
+                .prod-block-s__heading ПРОДАЖА ЯХТ
+                .prod-block-s__img
+                  img(src="img/category-pic.jpg", alt="")
+                .prod-block-s__data
+                  a(href="#").underline-w Pershing 115 `2007
+                  table
+                    tr
+                      td: span Длина, м.
+                      td: span 17
+                    tr
+                      td: span Двигатель
+                      td: span Volvo 575 л.с.
+                  .prod-block-s__price
+                    span 175 000$
+                a(href="#").all-ads.underline-w Все предложения
+                .prod-block-s__sponsor
+                  img(src="img/sponsor_bg.jpg", alt="")
+                  .sponsor-brand
+                    span Спонсор рубрики
+                    img(src="img/sponsor-logo.png", alt="")
+
+
+
+
+
+
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

@@ -1,0 +1,128 @@
+.new-account{
+  border-bottom: none;
+  padding-top: 40px;
+  /*min-height: calc(100vh - 230px);*/
+  @media screen and (max-width:767px) {
+    padding-top: 20px;
+  }
+}
+.account-block{
+  max-width: 360px;
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  background: #fff;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  &+small{
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    display: block;
+    margin: 0 auto;
+    max-width: 360px;
+    color: #b6b6b6;
+    padding: 0px 20px;
+  }
+  .underline{
+    font-size: 12px;
+  }
+  h3.heading{
+    text-transform: capitalize;
+  }
+  &__header{
+    padding: 20px 15px 15px;
+    h2{
+      margin: 0;
+    }
+  }
+  &__body{
+    border-top: 1px solid #d6d6d6;
+    .social{
+      padding: 20px 10px 25px;
+      border-bottom: 1px solid #d6d6d6;
+      .caption{
+        color: #666;
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 15px;
+        font-weight: 400;
+        display: block;
+      }
+      .btn-fb{
+        background-color: #4461a0;
+        max-width: 100px;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: none;
+        display: inline-block;
+        width: 100%;
+        &:hover{
+          background: lighten(#4461a0,5%);
+        }
+        i{
+          font-size: 15px;
+          padding-right: 5px;
+        }
+      }
+      &.pass-remember{
+        padding-bottom: 0;
+        border-bottom: none;
+        .caption{
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .account-info{
+      padding: 15px 20px 20px;
+      position: relative;
+      .choose{
+        position: absolute;
+        left:50%;
+        top: -8px;
+        transform: translateX(-50%);
+        background: #fff;
+        display: inline-block;
+        color: #666;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 0px 5px;
+      }
+      .btn{
+        max-width: 100px;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+      }
+      .pass{
+        position: relative;
+        .link-m{
+          position: absolute;
+          top: 37px;
+          right: 10px;
+          line-height: 18px;
+          &:hover{
+            border-bottom:1px solid transparent;
+          }
+        }
+      }
+    }
+  }
+  &__footer{
+    .wrap{
+      border-top: 1px solid #d6d6d6;
+      border-left: 0;
+      border-right: 0;
+      padding: 15px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      color: #666;
+      background-color: #f7f7fa;
+      a{
+        /*line-height: 12px;*/
+        line-height: 17px;
+      }
+    }
+  }
+}

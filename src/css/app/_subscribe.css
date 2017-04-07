@@ -1,0 +1,147 @@
+.subscribe-page{
+  &__advantages{
+    padding-bottom: 45px;
+    position: relative;
+    margin-bottom: 35px;
+    &::after{
+      content:'';
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      height: 1px;
+      background: #ccc;
+    }
+    .economy{
+      margin-top: 30px;
+      &::before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top:15px;
+        width: 40px;
+        height: 30px;
+        background: url('../img/walet.png') 0 0 no-repeat;
+      }
+    }
+    .convenience{
+      &::before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top:15px;
+        width: 40px;
+        height: 30px;
+        background: url('../img/book.png') 0 0 no-repeat;
+      }
+    }
+    .guarantee{
+      &::before{
+        content:'';
+        position: absolute;
+        left: 5px;
+        top:15px;
+        width: 30px;
+        height: 40px;
+        background: url('../img/diplom.png') 0 0 no-repeat;
+      }
+    }
+  }
+  &__advan{
+    padding-left: 50px;
+    position: relative;
+    &+.subscribe-page__advan{
+      margin-top: 25px;
+    }
+  }
+  &__create{
+    &>h3.heading{
+      text-align: center;
+    }
+    .gray{
+      color: #838383;
+    }
+    &>.subtitle{
+      text-align: center;
+    }
+    .steps{
+      margin: 40px 0;
+    }
+    .poster{
+      /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);*/
+      img{
+        width: 100%;
+      }
+    }
+    form{
+      .subtitle{
+        margin-bottom: 25px;
+      }
+      ul{
+        &+.gray{
+          margin-top: 25px;
+        }
+      }
+      li{
+        &+li{
+          margin-top: 15px;
+        }
+      }
+      label{
+        &.custom{
+          font-size: 14px;
+          @media screen and (max-width: 767px) {
+            font-size: 12px;
+          }
+          &>input:checked+span:before{
+            top: -2px;
+          }
+          strong{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  &__fields{
+    margin-top: 30px;
+    .step-tag{
+      vertical-align: middle;
+      padding: 0px 10px;
+      display: inline-block;
+      height: 36px;
+      background-color: white;
+      border: 1px solid rgba(217, 217, 217, 0.5);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 34px;
+      text-transform: uppercase;
+      border-radius:4px;
+      margin-right: 10px;
+      @media screen and (max-width: 767px) {
+        float: left;
+      }
+      &+span{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 15px;
+      }
+    }
+    .fields-group{
+      margin-top: 30px;
+      &__contacts{
+        margin-top: 30px;
+        h6{
+          color: #000;
+          font-size: 14px;
+          font-weight: 700;
+          margin-bottom: 18px;
+        }
+      }
+      &+.btn{
+        margin-top: 10px;
+      }
+    }
+  }
+}

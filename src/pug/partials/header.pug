@@ -1,0 +1,72 @@
+header#header.header
+  .container-fluid
+    .row
+      .col-xs-12
+        a(href="#").header__banner
+          img(src="img/banner_big.jpg", alt="")
+  .header__content
+    a(href="#").header__logo: img(src="img/logo.png", alt="")
+
+    .header__top-nav
+      .header-list
+        a(href="#").header-list__item: i.fa.fa-home
+        a(href="#").header-list__item eng
+        a(href="#").header-list__item rus
+        a(href="#").header-list__item ukr
+      a(href="#").underline-w Регистрация
+      a(href="#").underline-w Войти
+    .header__bottom-nav
+      .header-list
+        a(href="#").header-list__item: i.fa.fa-facebook
+        a(href="#").header-list__item: i.fa.fa-instagram
+        a(href="#").header-list__item: i.fa.fa-twitter
+        a(href="#").header-list__item: i.fa.fa-apple
+        a(href="#").header-list__item: i.fa.fa-android
+
+    .header__magazine.new
+      figure
+        img(src="img/mag_cover.jpg", alt="")
+        a(href="#").btn.btn_blue читать
+  nav.header__controls
+    a(href="#").mob-menu
+      .burger
+        span
+        span
+        span
+      span menu
+
+    ul.horison-list
+      a(href="#").close &times;
+      li.horison-list__item: a(href="#")
+        span Журнал
+      li.horison-list__item.sub-nav
+        a(href="#"): span рубрики
+        ul.sub-nav-list
+          li: a(href="#") На борту
+          li: a(href="#") Новости
+          li: a(href="#") Анонсы
+          li: a(href="#") Марины
+          li: a(href="#") Персона
+          li: a(href="#") Стиль
+          li: a(href="#") Путешествия
+          li: a(href="#") Оборудования
+      li.horison-list__item: a(href="#")
+        span Все выпуски
+      li.horison-list__item: a(href="#")
+        span Подписка
+      li.horison-list__item: a(href="#")
+        span предложения
+      li.horison-list__item: a(href="#")
+        span Путешествия
+      li.horison-list__item: a(href="#")
+        span Оборудование
+      li.horison-list__item: a(href="#")
+        span Репортаж
+    a(href="#").icon_search
+      i.fa.fa-search
+    .header__search
+      input(type="text", name="name", value="" placeholder="Поиск по сайту …")
+      button(type="submit", name="button")
+        i.fa.fa-search
+      button(type="button", name="button").close
+        i.fa.fa-close

@@ -1,0 +1,172 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row.text-center.sale-row
+        h2.heading Продажа яхт
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        a(href="#").btn.btn_blue ВСЕ предложения
+      .row.text-center.sale-row
+        h2.heading чартер яхт
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        .col-xs-12.col-sm-6.col-md-3
+          .sale-frame
+            .sale-frame__title
+              span.underline-w Pershing 115 `2007
+            figure.sale-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/uploads/1.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="picture").b-lazy
+            .sale-frame__data
+              table
+                tr
+                  td: span Длина, м.
+                  td: span 17
+                tr
+                  td: span Двигатель
+                  td: span Volvo 575 л.с.
+              a(href="#").btn Подробнее
+        a(href="#").btn.btn_blue ВСЕ предложения
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

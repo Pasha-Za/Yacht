@@ -1,0 +1,123 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content.about
+    section.container-fluid.about__info
+      .row
+        .row-md-height
+          .col-x-12.col-md-9.col-md-height.col-md-top
+            .styled-text
+              p
+                |Журнал YACHTS REVIEW был основан и зарегистрирован в 2004 году как информационное издание на русском и английском языках.
+
+              p
+                |Уже в 2006 году занял лидирующие позиции в Украине как глянцевое издание, публикующее актуальную и ранее закрытую уникальную информацию о новинках и событиях яхтенного мира, а также о путешествиях, интересных местах отдыха, развлечениях, и о многом другом…
+
+              p
+                |Каждый наш читатель, на страницах Журнала YACHTS REVIEW может найти для себя увлекательные статьи и справочные обзоры, узнать адреса стоянок или погрузиться в таинственный мир моря, выбрать правильный аксессуар или подобрать напиток… Или просто беззаботно пролистать увлекательные страницы.
+
+              p
+                |YACHTS REVIEW International на протяжении всех лет сохраняет главную идею – быть современным, интересным и полезным изданием не теряя при этом оптимизма  и качества, в чем Вы можете убедиться самостоятельно, став нашим читателем.
+
+          .col-x-12.col-md-3.col-md-height.col-md-top
+            aside.thumbnail.text-center
+              .thumbnail__img
+                img(src="img/human.jpg", alt="").circle-img
+              .thumbnail__data
+                .thumbnail__heading Welcome to aboard
+                .thumbnail__title Мира всем нам и безопасных морских переходов!
+                .thumbnail__text
+                p
+                  |Издатель и главный редактор журнала Александр Лейдикер
+
+    section.about__covers
+      img(src="img/covers.jpg", alt="")
+
+    section.container-fluid.about__categories
+      h2.heading Рубрики журнала
+      .row
+        .col-xs-12.col-sm-6.col-md-4.col-lg-3
+          .category-frame
+            figure.category-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/category-pic.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",alt="").b-lazy
+            .category-frame__data
+              .category-frame__heading На борту
+              .category-frame__text
+                p Статьи, фото, характеристики, сравнения яхт.
+        .col-xs-12.col-sm-6.col-md-4.col-lg-3
+          .category-frame
+            figure.category-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/category-pic.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",alt="").b-lazy
+            .category-frame__data
+              .category-frame__heading На борту
+              .category-frame__text
+                p Самые интересные новинки и «ноу-хау».
+        .col-xs-12.col-sm-6.col-md-4.col-lg-3
+          .category-frame
+            figure.category-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/category-pic.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",alt="").b-lazy
+            .category-frame__data
+              .category-frame__heading На борту
+              .category-frame__text
+                p Дайвинг, морская и океанская рыбалка, серфинг, скутеры, водные мотоциклы
+        .col-xs-12.col-sm-6.col-md-4.col-lg-3
+          .category-frame
+            figure.category-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/category-pic.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",alt="").b-lazy
+            .category-frame__data
+              .category-frame__heading На борту
+              .category-frame__text
+                p Статьи, фото, характеристики, сравнения яхт.
+        .col-xs-12.col-sm-6.col-md-4.col-lg-3
+          .category-frame
+            figure.category-frame__img.image-wrapper.ratio_16-9
+              img(data-src="img/category-pic.jpg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",alt="").b-lazy
+            .category-frame__data
+              .category-frame__heading На борту
+              .category-frame__text
+                p Новинки от производителей яхт, интересные моменты международных бот-шоу.
+
+    section.container-fluid.about__partnership
+      h2.heading Партнерство с международными бот-шоу
+      img(src="img/partnership.jpg", alt="")
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

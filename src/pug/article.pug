@@ -1,0 +1,180 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content.product
+    section.container-fluid
+      .row
+        .col-x-12.col-md-9.artile-page.product-info
+          h2.heading WIDER 150 GENESI. ГЕНЕРАТОР ИДЕЙ
+          .artile-page__info
+            time 27 октября 2016
+            span.subscribe
+              a(href="#").underline-w Подпишитесь
+              span и читайте статью в полном формате
+          .row
+            .col-xs-12
+              .page-info
+                ol.breadcrumb
+                  li
+                    a(href='#') Главная
+                  li
+                    a(href='#') Продажа и чартер яхт
+                  li.active CRN M/Y “Atlante”
+                .socials-list
+                  span.title Поделиться:
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+            .col-xs-12.artile-page__text
+              p
+                |Скорость, экономичность, эстетическая безупречность и при этом обязательно eco-friendly. Все эти красивые и правильные слова уже не просто тренд, а где-то даже настоящая рутина для итальянского яхтенного рынка. Это отлично понимал основатель верфи Wider, человек с 30-летним стажем создания luxury яхт, сделавший упор на эти качества при создании первой суперяхты Wider 150 Genesi.
+              img(src="img/articleImg.jpg", alt="")
+              p
+                |Скорость, экономичность, эстетическая безупречность и при этом обязательно eco-friendly. Все эти красивые и правильные слова уже не просто тренд, а где-то даже настоящая рутина для итальянского яхтенного рынка. Это отлично понимал основатель верфи Wider, человек с 30-летним стажем создания luxury яхт, сделавший упор на эти качества при создании первой суперяхты Wider 150 Genesi.
+              img(src="img/articleImg.jpg", alt="")
+              p
+                |Скорость, экономичность, эстетическая безупречность и при этом обязательно eco-friendly. Все эти красивые и правильные слова уже не просто тренд, а где-то даже настоящая рутина для итальянского яхтенного рынка. Это отлично понимал основатель верфи Wider, человек с 30-летним стажем создания luxury яхт, сделавший упор на эти качества при создании первой суперяхты Wider 150 Genesi.
+            .col-xs-12.same-materials
+              h2.heading Материалы по теме:
+              .row
+                .col-xs-12.col-sm-4
+                  .info-frame
+                    figure.info-frame__img
+                      img(src="img/uploads/1.jpg", alt="")
+                    .info-frame__heading Новости
+                    .info-frame__title Заглавие и название статьи
+                    .info-frame__text
+                      p
+                        |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+                    .info-frame__btn
+                      a(href="#").btn Подробнее
+                .col-xs-12.col-sm-4
+                  .info-frame
+                    figure.info-frame__img
+                      img(src="img/uploads/1.jpg", alt="")
+                    .info-frame__heading Новости
+                    .info-frame__title Заглавие и название статьи
+                    .info-frame__text
+                      p
+                        |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+                    .info-frame__btn
+                      a(href="#").btn Подробнее
+                .col-xs-12.col-sm-4
+                  .info-frame
+                    figure.info-frame__img
+                      img(src="img/uploads/1.jpg", alt="")
+                    .info-frame__heading Новости
+                    .info-frame__title Заглавие и название статьи
+                    .info-frame__text
+                      p
+                        |Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом. Текстовое описание статьи крпуным шрифтом и читаемым черным шрифтом.
+                    .info-frame__btn
+                      a(href="#").btn Подробнее
+
+        aside.col-x-12.col-md-3.sidebar-base
+          .row
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .subscribe-mail
+                form(action="", method="post")
+                  p.heading ПодпиШитесь
+                  p.subheading Будьте в курсе актуальных новостей!
+                  input(type="email", name="name", value="" placeholder="Ваш email")
+                  button(type="submit", name="button").btn.btn_red Подписатся
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12.od-3
+              .sidebar-base__socials
+                p.heading Мы в соц. сетях
+                .socials-list
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+              .sidebar-base__fb
+                img(src="img/fb_widget.jpg", alt="")
+
+            .col-xs-12.col-sm-4.col-md-12.od-1
+              .sidebar-base__banner
+                img(src="img/banner_mid.jpg", alt="")
+            .col-xs-12.col-sm-4.col-md-12
+              .prod-block-s
+                .prod-block-s__heading ПРОДАЖА ЯХТ
+                .prod-block-s__img
+                  img(src="img/category-pic.jpg", alt="")
+                .prod-block-s__data
+                  a(href="#").underline-w Pershing 115 `2007
+                  table
+                    tr
+                      td: span Длина, м.
+                      td: span 17
+                    tr
+                      td: span Двигатель
+                      td: span Volvo 575 л.с.
+                  .prod-block-s__price
+                    span 175 000$
+                a(href="#").all-ads.underline-w Все предложения
+                .prod-block-s__sponsor
+                  img(src="img/sponsor_bg.jpg", alt="")
+                  .sponsor-brand
+                    span Спонсор рубрики
+                    img(src="img/sponsor-logo.png", alt="")
+
+
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

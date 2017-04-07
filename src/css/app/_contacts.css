@@ -1,0 +1,235 @@
+.contact{
+  &__address{
+    color: #444;
+    font-weight: 400;
+    font-size: 15px;
+    @media screen and (max-width: 676px) {
+      &+.contact__address{
+        margin-top: 20px;
+      }
+    }
+    a{
+      color:#000;
+      position: relative;
+      padding-left: 20px;
+      &::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../img/tel.png') 0 0 no-repeat;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    p{
+      &+p{
+        margin-top: 10px;
+      }
+    }
+  }
+  &__redaction{
+    margin: 40px 0 50px;
+    p{
+      font-family: Roboto;
+      font-size: 15px;
+      line-height: 25px;
+      color: #444;
+      font-weight: 400;
+      &+p{
+        margin-top: 25px;
+      }
+      strong{
+        font-weight: 900;
+        color:#000;
+      }
+      a{
+        color:#000;
+      }
+    }
+  }
+  &__feedback{
+    h3.heading{
+      text-align: center;
+    }
+  }
+}
+
+/**/
+.aside-text{
+  .big-img{
+    width: 100%;
+    margin-top: 20px;
+    &+.heading{
+      margin-top: 28px;
+    }
+  }
+  .heading{
+    &+.big-img{
+      margin-top: 0;
+    }
+  }
+  strong{
+    font-weight: 700;
+    color:#000;
+  }
+  ul{
+    &.ad-list{
+      li{
+        padding-left: 50px;
+        position: relative;
+        &+li{
+          margin-top: 30px;
+        }
+        img{
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform:translateY(-50%);
+        }
+      }
+    }
+    li{
+      line-height: 20px;
+    }
+    +p{
+      margin-top: 20px;
+    }
+  }
+  p{
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 25px;
+    color: #444;
+    font-weight: 400;
+    &+p{
+      margin-top: 25px;
+    }
+    a{
+      color:#000;
+    }
+  }
+  &__questions{
+    margin: 40px 0;
+    .city{
+      color: #444;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .phone{
+      color: black;
+      font-size: 20px;
+      display: block;
+      margin-bottom: 15px;
+      span{
+        position: relative;
+        padding-left: 26px;
+        &::before{
+          position: absolute;
+          content:'';
+          left: 0;
+          top: 0;
+          background: url('../img/tel.png') 0 0 no-repeat;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    .email{
+      margin-top: 40px;
+      color: #444;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  .download-price{
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 25px 0 10px;
+  }
+}
+.profession-b{
+  p{
+    &+p{
+      margin-top: 5px;
+    }
+  }
+  &+.profession-b{
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+}
+
+/*Article page*/
+.artile-page{
+  &__info{
+    margin: 35px 0;
+    color: #7f7f7f;
+    font-size: 12px;
+    font-weight: 400;
+    time{
+      position: relative;
+      padding-left: 25px;
+      &:before{
+        position: absolute;
+        left: 0;
+        content:'';
+        top: 0;
+        width: 16px;
+        height: 15px;
+        background: url('../img/calendar.png') 0 0 no-repeat;
+      }
+    }
+    .subscribe{
+      margin-left: 25px;
+      position: relative;
+      padding-left: 25px;
+      @media screen and (max-width: 767px) {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        line-height: 15px;
+      }
+      &:before{
+        position: absolute;
+        left: 0;
+        content:'';
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: url('../img/doc_download.png') 0 0 no-repeat;
+      }
+      .underline-w{
+        margin-right: 5px;
+      }
+    }
+  }
+  &__text{
+    p{
+      color: #444;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      &+p,&+img{
+        margin-top: 25px;
+      }
+    }
+    img{
+      width: 100%;
+      &+p{
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.same-materials{
+  text-align: center;
+  margin-top: 35px;
+  .heading{
+    text-align: center!important;
+  }
+}

@@ -1,0 +1,147 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content.product
+    section.container-fluid
+      .row
+        .col-x-12.col-md-9.product-info
+          h2.heading Продажа CRN “Atlante”
+          .row
+            .col-xs-12
+              .page-info
+                ol.breadcrumb
+                  li
+                    a(href='#') Главная
+                  li
+                    a(href='#') Продажа и чартер яхт
+                  li.active CRN M/Y “Atlante”
+                .socials-list
+                  span.title Поделиться:
+                  a(href="#").socials-list__item
+                    i.fa.fa-facebook
+                  a(href="#").socials-list__item
+                    i.fa.fa-twitter
+                  a(href="#").socials-list__item
+                    i.fa.fa-google-plus
+                  a(href="#").socials-list__item
+                    i.fa.fa-behance
+                  a(href="#").socials-list__item
+                    i.fa.fa-instagram
+            .col-xs-12
+              .slider-section.index-slider
+                .slider-section__item
+                  img(src="img/uploads/slide-2.jpg", alt="")
+                .slider-section__item
+                  img(src="img/uploads/slide-2.jpg", alt="")
+              .price-section
+                .price-section__tag По запросу
+
+            .col-xs-12
+              .product-info__data
+                h3.heading Характеристики
+                table
+                  tr
+                    td: span Верфь
+                    td: span Название
+                  tr
+                    td: span Класс
+                    td: span Класс яхты
+                  tr
+                    td: span Год выпуска
+                    td: span 2011
+                  tr
+                    td: span Верфь
+                    td: span Название
+                  tr
+                    td: span Класс
+                    td: span Класс яхты
+                  tr
+                    td: span Год выпуска
+                    td: span 2011
+                  tr
+                    td: span Верфь
+                    td: span Название
+                  tr
+                    td: span Класс
+                    td: span Класс яхты
+                  tr
+                    td: span Год выпуска
+                    td: span 2011
+            .col-xs-12
+              .product-info__data
+                h3.heading Описание
+                .description
+                  p
+                    |Группа Custom Line, производящая суда из композитных материалов, была основана в 1996 году и дебютировала в 1998 году, официально став частью Ferretti Group. Сегодня компания является синонимом уникальности, совершенства и успеха. В Анконе, где располагается верфь на площади более тринадцати тысяч квадратных метров, производится 4-5 мегаяхт в год. Верфь строит мегаяхты под заказ из стали и алюминия под маркой CRN, а также – мегаяхты из композитных материалов под маркой Custom Line. В настоящий момент в Анконе строятся 27 новых судов от 29 до 72 метров, включая 6 судов из стали и алюминия длиною более 60 метров.
+
+                  p
+                    |В настоящий момент пять различных мегаяхт из композитных материалов от 30 до 43 метров создаются на верфях компании. Пять способов жизни в море, пять различных характеристик, пять результатов плодотворного сотрудничества технического персонала CRN и Zuccon International Project. Философия, исповедуемая этим престижным брендом, бесспорным лидером в данном сегменте, проста: создание элегантного продукта с превосходными мореходными качествами с использованием передовых технологий и тщательной проверкой мельчайших деталей.
+
+        .col-x-12.col-md-3
+          .product-user-info
+            .product-user-info__heading
+              img(src="img/doc.png", alt="")
+              |ЗАПРОС ИНФОРМАЦИИ
+            .product-user-info__panel
+              p Телефоны:
+              .phones
+                a(href="tel:380487773610") +380 48 777 36 10
+                a(href="tel:380487773610") +380 48 777 36 10
+            form(action="", method="post").product-user-info__form
+              p.gray Заполните пожалуйста форму и мы свяжемся с вами!
+              .form-group
+                label.require Ваше имя:
+                input(type="text", name="name", value="").form-control
+              .form-group
+                label.require Email:
+                input(type="email", name="name", value="").form-control
+              .form-group
+                label.require Телефон:
+                input(type="text", name="name", value="").form-control
+              .form-group
+                label Сообщение:
+                textarea(name="name", rows="8", cols="40").form-control
+              button(type="submit", name="button").btn.btn_grad-blue Отправить
+
+
+
+    section.container.index-subscribe
+      h2.heading Подписаться на журнал
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .magazine-block
+            .magazine-block__img
+              img(src="img/mag-sign.jpg", alt="")
+            .magazine-block__data
+              p.heading Text
+              table
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 1 номер
+                  td 120.00 гривен
+                tr
+                  td 10 номеров
+                  td 820.00 гривен
+              button(type="button", name="button").btn.btn_red подписаться
+
+block footer
+  include ../pug/partials/footer.pug

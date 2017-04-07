@@ -1,0 +1,54 @@
+extends layouts/main.pug
+
+//- Pass your variables through this block.
+append variables
+//-
+  - title = 'index';
+  - debug = true;
+
+//- Debug links. Add some.
+append debug_links
+  //- a(href='http://google.com') google, son, for example
+
+//- use block/append/prepend 'scripts' to override/add scripts
+
+block header
+  include ../pug/partials/header.pug
+block body
+  main.content
+    section.container-fluid
+      .row
+        .col-x-12
+          section.new-account
+            .container
+              .account-block.center-block
+                .account-block__header
+                  h3.heading.text-center Регистрация
+                .account-block__body
+                  form.account-info
+                    .form-group
+                      label(for="").require
+                        |Email:
+                      input(type="email").form-control
+                    .form-group
+                      label(for="").require
+                        |Пароль:
+                      input(type="password").form-control
+                    .form-group
+                      label(for="")
+                        |Имя:
+                      input(type="text").form-control
+                    .form-group
+                      label(for="")
+                        |Телефон:
+                      input(type="text").form-control
+                    button(type="submit", name="button").btn.btn-default.btn_blue
+                      | Создать
+                .account-block__footer.text-center
+                  .wrap
+                    span Уже зарегестрированы? <a href="#" class="link-m underline">Войти</a>
+              //- small.
+              //-   Нажимая на кнопку создать через соцсеть, вы принимаете условия Пользовательского соглашения
+
+block footer
+  include ../pug/partials/footer.pug
